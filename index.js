@@ -6,6 +6,7 @@ const audioPlayerContainer = document.getElementById('audio-player-container');
 const seekSlider = document.getElementById('seek-slider');
 const volumeSlider = document.getElementById('volume-slider');
 const muteIconContainer = document.getElementById('mute-icon');
+const volumeOutput = document.getElementById('volume-output');
 let playState = 'play';
 let muteState = 'unmute';
 
@@ -137,3 +138,36 @@ volumeSlider.addEventListener('input', (e) => {
     outputContainer.textContent = value;
     audio.volume = value / 100;
 });
+
+// VOLUME LEVEL
+
+
+volumeOutput.style.display = 'none';
+
+volumeSlider.addEventListener('input', () => {
+    volumeOutput.style.display = 'block';
+    volumeOutput.textContent = volumeSlider.value;
+});
+
+volumeSlider.addEventListener('change', () => {
+    volumeOutput.style.display = 'none';
+});
+
+volumeSlider.addEventListener('input', () => {
+    volumeOutput.textContent = volumeSlider.value;
+    positionVolumeOutput();
+    volumeOutput.style.display = 'block';
+});
+
+volumeSlider.addEventListener('change', () => {
+    volumeOutput.style.display = 'none';
+});
+
+function positionVolumeOutput() {
+    const thumbWidth = -1020;
+    const sliderWidth = volumeSlider.offsetWidth;
+    const value = parseFloat(volumeSlider.value);
+    const percent = (value / volumeSlider.max) * 100;
+    const offset = (sliderWidth * (percent / 100)) - (thumbWidth / 2);
+    volumeOutput.style.left = offset + 'px';
+}
