@@ -17,10 +17,10 @@
                     <p class="artist-name">Tame Impala</p>
                 </div>
                 <div class="info-right">
-                    <button id="play-icon"></button>
+                    <button id="play-icon" class="play-icon"></button>
                 </div>
             </div>
-            <div id="audio-player-container">
+            <div id="audio-player-container" class="audio-player-container">
                 <audio src="Tame_Impala_-_Borderline.mp3" preload="metadata" loop></audio>
                 <div class="controls">
                     <div class="song-progress">
@@ -31,9 +31,11 @@
                         <input type="range" id="seek-slider" max="100" value="0">
                     </div>
                     <div class="volume-bar">
-                        <button id="mute-icon"></button>
+                        <div class="volume-button">
+                            <button id="mute-icon" class="mute-icon"></button>
+                        </div>
                         <output id="volume-output" class="volume-output">100</output>
-                        <input type="range" id="volume-slider" max="100" value="100">
+                        <input type="range" id="volume-slider" class="volume-slider" max="100" value="100">
                     </div>
                 </div>
             </div>
