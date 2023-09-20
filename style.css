@@ -31,7 +31,7 @@ button {
     justify-content: center;
     margin: 60px 0 0 0;
 }
-.audio-player-container {
+#audio-player-container {
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -86,7 +86,7 @@ button {
     max-width: 640px;
     max-height: 640px;
 }
-.play-icon {
+#play-icon {
     font-size: 20px;
     width: 50px;
     height: 50px;
@@ -128,23 +128,23 @@ path {
     color: #ececec;
 }
 
-.volume-slider {
+#volume-slider {
     width: 100%;
     background-color: transparent;
 }
-.volume-slider::-webkit-slider-runnable-track {
+#volume-slider::-webkit-slider-runnable-track {
     background: #9d9d9d;
     border-radius: 5px;
 }
-.volume-slider::-moz-range-track {
+#volume-slider::-moz-range-track {
     background: #9d9d9d;
     border-radius: 5px;
 }
-.volume-slider::-ms-fill-upper {
+#volume-slider::-ms-fill-upper {
     background: #9d9d9d;
     border-radius: 5px;
 }
-.volume-slider::before {
+#volume-slider::before {
     width: var(--volume-before-width);
 }
 .volume-output {
@@ -286,6 +286,10 @@ input[type="range"]:active::-ms-thumb {
         width: 45px;
         height: 45px;
     }
+    .mute-icon {
+        width: 38px;
+        height: 38px;
+    }
     .song-progress {
         flex: 2.5; 
     }
@@ -304,6 +308,11 @@ input[type="range"]:active::-ms-thumb {
     .play-icon {
         width: 40px;
         height: 40px;
+    }
+    .mute-icon {
+        width: 34px;
+        height: 34px;
+        margin-top: 2px;
     }
     .song-progress {
         padding: 0 10px;
