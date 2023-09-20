@@ -164,7 +164,7 @@ volumeSlider.addEventListener('change', () => {
 });
 
 function positionVolumeOutput() {
-    const thumbWidth = -1020;
+    const thumbWidth = -1010;
     const sliderWidth = volumeSlider.offsetWidth;
     const value = parseFloat(volumeSlider.value);
     const percent = (value / volumeSlider.max) * 100;
